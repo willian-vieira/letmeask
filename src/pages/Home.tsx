@@ -2,6 +2,8 @@ import ilustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
 
+import { Button } from '../components/Button';
+
 import '../styles/auth.scss';
 
 export function Home() {
@@ -15,17 +17,22 @@ export function Home() {
             <main>
                 <div className="main-content">
                     <img src={logoImg} alt="Letmeask" />
-                    <button>
+
+                    <button className="create-rom">
                         <img src={googleIconImg} alt="Logo do Google" />
                         Crie sua sala com o Google
                     </button>
-                    <div>ou entre em uma sala</div>
+
+                    <div className="separator">
+                        ou entre em uma sala
+                    </div>
+
                     <form>
-                        <input 
-                         type="text" 
-                         placeholder="Digite o código da sala" 
-                        />
-                        <button type="submit">Entrar na sala</button>
+                        <input type="text" placeholder="Digite o código da sala"/>
+
+                        <Button type="submit">
+                            Entrar na sala
+                        </Button>
                     </form>
                 </div>
             </main>
