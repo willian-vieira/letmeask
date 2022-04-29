@@ -1,6 +1,6 @@
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import { auth, firebase } from '../services/firebase';
+import {auth, firebase } from '../services/firebase';
 
 import ilustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
@@ -9,11 +9,10 @@ import googleIconImg from '../assets/images/google-icon.svg';
 import { Button } from '../components/Button';
 
 import '../styles/auth.scss';
-import { resolve } from 'path';
 
 export function Home() {
     //variável navegate: Recebe o Hook 'useNavigate' responsável por fazer navegações de paginas/rotas
-    //let navegate = useNavigate();
+    let navegate = useNavigate();
     
     //1-função recebe no 'provider' método de autentificação padrão do Google
     //2-função recebe 'navegate' com parametro da sua rota atual
@@ -33,7 +32,7 @@ export function Home() {
         //    console.log(result);
         //});
 
-        //navegate('/rooms/new')
+        navegate('/rooms/new')
     }
 
     return (
