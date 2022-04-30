@@ -19,18 +19,10 @@ export function Home() {
     //3-função realiza autentificação e navegação entre as paginas, pós autentificação com sucesso!
     function hadleCreateRoom() {
         const provider = new firebase.auth.GoogleAuthProvider();
-        
-        /*auth.signInWithPopup(provider).then(resolve => {
-            console.log(resolve);
-        })*/
 
         auth.signInWithPopup(provider).then(function(result) {
             console.log(result);
         })
-
-       // firebase.auth().signInWithPopup(provider).then(function(result) {
-        //    console.log(result);
-        //});
 
         navegate('/rooms/new')
     }
